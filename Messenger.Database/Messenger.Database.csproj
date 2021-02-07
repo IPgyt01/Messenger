@@ -63,7 +63,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Collections.cs" />
         <Compile Include="DatabaseContext.cs" />
+        <Compile Include="Models\Chats.cs" />
+        <Compile Include="Models\Messages.cs" />
+        <Compile Include="Models\Users.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

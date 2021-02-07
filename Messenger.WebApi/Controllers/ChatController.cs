@@ -6,7 +6,7 @@ namespace Messenger.WebApi.Controllers
 {
     public class ChatController
     {
-        private DatabaseContext _db = new DatabaseContext();
+        private ChatContext _db = new ChatContext();
 
         public IMongoCollection<Chats> Chats => _db.Database.GetCollection<Chats>(Collections.Chats);
     }

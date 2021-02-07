@@ -6,7 +6,7 @@ namespace Messenger.WebApi.Controllers
 {
     public class MessageController
     {
-        private DatabaseContext _db = new DatabaseContext();
+        private MessageContext _db = new MessageContext();
         
         public IMongoCollection<Messages> Messages => _db.Database.GetCollection<Messages>(Collections.Messages);
     }

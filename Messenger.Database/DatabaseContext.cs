@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using Messenger.Database.Models;
+using MongoDB.Driver;
 
 namespace Messenger.Database
 {
@@ -6,10 +7,10 @@ namespace Messenger.Database
     {
         /*временная переменная, которая подключает вас к локальному хосту mongo
          когда сервер будет в инете, значение поменяется*/ 
-        private readonly string _host = "mongodb://localhost:27017";
+        private readonly string _host = "mongodb+srv://alexzonic:Flatronw22@cluster0.vvwvz.mongodb.net/MessengerDB?retryWrites=true&w=majority";
 
         // это будет именем базы данных, в которой хранятся коллекции
-        private readonly string _dbName = "Messenger";
+        private readonly string _dbName = "MessengerDB";
         
         private MongoClient _client;
         public IMongoDatabase Database { get; }

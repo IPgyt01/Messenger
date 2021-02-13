@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Messenger.Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="560" Width="820">
     <Grid>
-        
+        <Grid HorizontalAlignment="Left" Height="529" VerticalAlignment="Top" Width="270" Background="AliceBlue"/>
+        <Menu HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="270" Background="Black"/>
+
     </Grid>
 </Window>

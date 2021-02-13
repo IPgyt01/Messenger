@@ -5,24 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Messenger.Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="560" Width="820" MinWidth="500px" MinHeight="280">
+        Title="MainWindow" Height="560" Width="820">
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="270px"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <!-- Левая часть -->
+        <!-- Левая часть, список диалогов + меню -->
         <DockPanel Grid.Column="0">
-            <!-- Шапка -->
-            <Menu DockPanel.Dock="Top" Height="30px"></Menu>
-            <!-- Body Список диалогов -->
-            <ListBox>
-                <ListBoxItem>
-                    <Button Width="50px" Height="50px" Click="ButtonBase_OnClick"></Button>
-                </ListBoxItem>
-            </ListBox>
+            <Menu DockPanel.Dock="Top" Height="30px" Background="Aquamarine"></Menu>
+            <ListBox Background="Aqua"></ListBox>
         </DockPanel>
-        <!-- Правая часть 123 -->
-        <Frame Grid.Column="1" Name="frame" NavigationUIVisibility="Hidden"></Frame>
+        <!-- Правая часть, диалог + место ввода message + имя собеседника -->
+        <Grid Grid.Column="1" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30px"/>
+                <RowDefinition/>
+                <RowDefinition Height="50px"/>
+            </Grid.RowDefinitions>
+           <Border Grid.Row="0">
+               
+           </Border>
+            <Border Grid.Row="1">
+                <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
+                         Focusable="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem>
+                                <Border>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock />
+                                        <TextBlock />
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            <Border Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" ></Button>
+                    <TextBox Grid.Column="1" ></TextBox>
+                    <Button Grid.Column="2"  ></Button>
+                </Grid>
+            </Border>
+           
+        </Grid>
     </Grid>
 </Window>

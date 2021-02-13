@@ -8,6 +8,6 @@ namespace Messenger.WebApi.Controllers
     {
         private UserContext _db = new UserContext();
 
-        public IMongoCollection<Users> Users => _db.Database.GetCollection<Users>(Collections.Users);
+        public IMongoCollection<User> Users => _db.Database.GetCollection<User>(Collections.Users);
     }
 }

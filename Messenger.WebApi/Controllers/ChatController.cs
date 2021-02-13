@@ -8,6 +8,6 @@ namespace Messenger.WebApi.Controllers
     {
         private ChatContext _db = new ChatContext();
 
-        public IMongoCollection<Chats> Chats => _db.Database.GetCollection<Chats>(Collections.Chats);
+        public IMongoCollection<Chat> Chats => _db.Database.GetCollection<Chat>(Collections.Chats);
     }
 }

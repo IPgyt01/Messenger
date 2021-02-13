@@ -87,8 +87,16 @@
             <DependentUpon>MainWindow.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Page Include="Pages\Dialog.xaml" />
+        <Page Include="Pages\PageNoDialog.xaml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Pages\Dialog.xaml.cs">
+          <DependentUpon>Dialog.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Pages\PageNoDialog.xaml.cs">
+          <DependentUpon>PageNoDialog.xaml</DependentUpon>
+        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs">
             <SubType>Code</SubType>
         </Compile>

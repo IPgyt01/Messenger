@@ -1,4 +1,5 @@
-﻿using Messenger.Database;
+﻿using System.Threading.Tasks;
+using Messenger.Database;
 using Messenger.Database.Models;
 using MongoDB.Driver;
 
@@ -6,8 +7,17 @@ namespace Messenger.WebApi.Controllers
 {
     public class UserController
     {
-        private UserContext _db = new UserContext();
+        private readonly UserContext _db = new UserContext();
 
-        public IMongoCollection<User> Users => _db.Database.GetCollection<User>(Collections.Users);
+        public async Task<User> UserIsValid(User userInfo)
+        {
+            var user = await _db.GetUserValidation(userInfo.Login);
+            return user.Password.Equals(userInfo.Password) ? user : null;
+        }
+
+        public async Task RegisterUser(User user)
+        {
+            await _db.Create(user);
+        }
     }
 }

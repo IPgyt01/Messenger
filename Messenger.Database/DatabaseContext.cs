@@ -13,7 +13,7 @@ namespace Messenger.Database
         private readonly string _dbName = "MessengerDB";
         
         private MongoClient _client;
-        public IMongoDatabase Database { get; }
+        protected IMongoDatabase Database { get; }
             
         public DatabaseContext()
         {

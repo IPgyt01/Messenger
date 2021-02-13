@@ -6,9 +6,56 @@
         xmlns:local="clr-namespace:Messenger.Desktop"
         mc:Ignorable="d"
         Title="MainWindow" Height="560" Width="820">
-    <Grid>
-        <Grid HorizontalAlignment="Left" Height="529" VerticalAlignment="Top" Width="270" Background="AliceBlue"/>
-        <Menu HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="270" Background="Black"/>
-
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270px"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!-- Левая часть, список диалогов + меню -->
+        <DockPanel Grid.Column="0">
+            <Menu DockPanel.Dock="Top" Height="30px" Background="Aquamarine"></Menu>
+            <ListBox Background="Aqua"></ListBox>
+        </DockPanel>
+        <!-- Правая часть, диалог + место ввода message + имя собеседника -->
+        <Grid Grid.Column="1" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30px"/>
+                <RowDefinition/>
+                <RowDefinition Height="50px"/>
+            </Grid.RowDefinitions>
+           <Border Grid.Row="0">
+               
+           </Border>
+            <Border Grid.Row="1">
+                <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
+                         Focusable="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem>
+                                <Border>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock />
+                                        <TextBlock />
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            <Border Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" ></Button>
+                    <TextBox Grid.Column="1" ></TextBox>
+                    <Button Grid.Column="2"  ></Button>
+                </Grid>
+            </Border>
+           
+        </Grid>
     </Grid>
 </Window>

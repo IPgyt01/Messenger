@@ -11,21 +11,23 @@
             <ColumnDefinition Width="270px"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <!-- Левая часть, список диалогов + меню -->
+        <!-- Левая часть -->
         <DockPanel Grid.Column="0">
-            <Menu DockPanel.Dock="Top" Height="30px" Background="Aquamarine"></Menu>
-            <ListBox Background="Aqua"></ListBox>
+            <!-- Шапка -->
+            <Menu DockPanel.Dock="Top" Height="30px"></Menu>
+            <!-- Body Список диалогов -->
+            <ListBox></ListBox>
         </DockPanel>
-        <!-- Правая часть, диалог + место ввода message + имя собеседника -->
+        <!-- Правая часть -->
         <Grid Grid.Column="1" ShowGridLines="True">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30px"/>
                 <RowDefinition/>
                 <RowDefinition Height="50px"/>
             </Grid.RowDefinitions>
-           <Border Grid.Row="0">
-               
-           </Border>
+            <!-- Шапка  -->
+           <Border Grid.Row="0"></Border>
+            <!-- Body Диалог -->
             <Border Grid.Row="1">
                 <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
                          Focusable="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
@@ -43,19 +45,19 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Border>
+            <!-- Footer Message -->
             <Border Grid.Row="2">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
-                        <ColumnDefinition Width="5*"></ColumnDefinition>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition MaxWidth="60px"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition MaxWidth="60px"/>
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" ></Button>
                     <TextBox Grid.Column="1" ></TextBox>
                     <Button Grid.Column="2"  ></Button>
                 </Grid>
             </Border>
-           
         </Grid>
     </Grid>
 </Window>

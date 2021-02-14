@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Messenger.Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="560" Width="820">
+        Title="MainWindow" Height="560" Width="820" MinWidth="500px" MinHeight="280">
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="270px"/>

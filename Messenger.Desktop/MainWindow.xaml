@@ -22,7 +22,7 @@
                 </ListBoxItem>
             </ListBox>
         </DockPanel>
-        <!-- Правая часть -->
+        <!-- Правая часть 123 -->
         <Frame Grid.Column="1" Name="frame" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

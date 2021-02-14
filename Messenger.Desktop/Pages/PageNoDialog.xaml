@@ -11,7 +11,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <!-- Шапка  -->
-        <Border Grid.Row="0"></Border>
+        <Border Grid.Row="0" Background="Aqua"></Border>
         <Border Grid.Row="1"></Border>
     </Grid>
 </Page>

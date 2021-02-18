@@ -17,7 +17,7 @@ namespace Messenger.Database
         }
 
         // с именами у меня очень туго
-        public async Task<User> GetUserValidation(string login)
+        public async Task<User> GetUserByLogin(string login)
         {
             if (string.IsNullOrWhiteSpace(login))
                 return null;

@@ -11,7 +11,7 @@ namespace Messenger.WebApi.Controllers
 
         public async Task<User> UserIsValid(User userInfo)
         {
-            var user = await _db.GetUserValidation(userInfo.Login);
+            var user = await _db.GetUserByLogin(userInfo.Login);
             return user.Password.Equals(userInfo.Password) ? user : null;
         }
 

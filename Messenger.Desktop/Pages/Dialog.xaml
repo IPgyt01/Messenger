@@ -4,17 +4,18 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Messenger.Desktop"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30px"/>
+            <RowDefinition Height="50px"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50px"/>
         </Grid.RowDefinitions>
         <!-- Шапка  -->
-        <Border Grid.Row="0"></Border>
+        <Border Grid.Row="0" Background="Indigo" Height="50"></Border>
         <!-- Body Диалог -->
-        <Border Grid.Row="1">
+        <Border Grid.Row="1" BorderBrush="Bisque" BorderThickness="1px 0 0 1">
             <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
                      Focusable="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
                 <ListBox.ItemTemplate>
@@ -32,16 +33,36 @@
             </ListBox>
         </Border>
         <!-- Footer Message -->
-        <Border Grid.Row="2">
+        <Border Grid.Row="2" BorderBrush="Bisque" BorderThickness="1px 0 0 0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition MaxWidth="60px"/>
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition MaxWidth="60px"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"></Button>
-                <TextBox Grid.Column="1"></TextBox>
-                <Button Grid.Column="2"></Button>
+                <materialDesign:PackIcon 
+                    Grid.Column="0"
+                    Kind="LinkVariantPlus"
+                    Foreground="{DynamicResource MaterialDesignBody}"
+                    Height="30" 
+                    Width="30" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    MouseUp="UIElement_OnMouseUp2"
+                    />
+                <materialDesign:Card Grid.Column="1" Margin="3">
+                    <TextBox x:Name="TextBox" TextAlignment="Justify" Padding="2" Margin="2" Style="{DynamicResource MaterialDesignTextBox}"></TextBox>
+                </materialDesign:Card>
+                <materialDesign:PackIcon 
+                    Grid.Column="2" 
+                    Kind="ChevronRightCircleOutline" 
+                    Foreground="{DynamicResource MaterialDesignBody}"
+                    Height="30" 
+                    Width="30" 
+                    MouseUp="UIElement_OnMouseUp"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    />
             </Grid>
         </Border>
     </Grid>

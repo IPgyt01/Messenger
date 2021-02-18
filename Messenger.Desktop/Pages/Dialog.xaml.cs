@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Messenger.Desktop
 {
@@ -7,6 +8,16 @@ namespace Messenger.Desktop
         public Dialog()
         {
             InitializeComponent();
+        }
+
+        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            TextBox.Text = "its work";
+        }
+        
+        private void UIElement_OnMouseUp2(object sender, MouseButtonEventArgs e)
+        {
+            TextBox.Text = "";
         }
     }
 }

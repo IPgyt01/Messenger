@@ -1,13 +1,11 @@
 ﻿using System;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 
 namespace Messenger.Database.Models
 {
+    // эта модель не будет храниться в отдельной колекции
+    // сообщения будут храниться в модели Chat
     public class Message
     {
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
         // содержимое сообщения
         public string Content { get; set; }
         // Id отправителя сообщения

@@ -5,6 +5,5 @@
     {
         public const string Users = "Users";
         public const string Chats = "Chats";
-        public const string Messages = "Messages";
     }
 }

@@ -70,7 +70,6 @@
         <Compile Include="Api.cs" />
         <Compile Include="UserAuthorize.cs" />
         <Compile Include="Controllers\ChatController.cs" />
-        <Compile Include="Controllers\MessageController.cs" />
         <Compile Include="Controllers\UserController.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

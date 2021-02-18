@@ -40,10 +40,11 @@
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition MaxWidth="60px"/>
                 </Grid.ColumnDefinitions>
+                <!-- PackIcon - как ни странно иконка; Foreground до конца не понял как настраивать  -->
                 <materialDesign:PackIcon 
                     Grid.Column="0"
                     Kind="LinkVariantPlus"
-                    Foreground="{DynamicResource MaterialDesignBody}"
+                    Foreground="{DynamicResource MaterialDesignBody}" 
                     Height="30" 
                     Width="30" 
                     VerticalAlignment="Center"

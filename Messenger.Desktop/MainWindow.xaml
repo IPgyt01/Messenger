@@ -23,8 +23,9 @@
             <Menu DockPanel.Dock="Top" Height="50px"></Menu>
             <!-- Body Список диалогов -->
             <ListBox Style="{DynamicResource MaterialDesignCardsListBox}">
+                <!-- Как я понял, Card - чето типа области или элемента materialDesign -->
                 <materialDesign:Card>
-                    <ListBoxItem MouseUp="ButtonBase_OnClick" Height="50px" Width="270">
+                    <ListBoxItem MouseUp="ButtonBase_OnClick" Height="50px">
                         dialog 1
                     </ListBoxItem>
                 </materialDesign:Card>

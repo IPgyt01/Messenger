@@ -56,7 +56,7 @@
                 </materialDesign:Card>
                 <materialDesign:PackIcon 
                     Grid.Column="2" 
-                    Kind="ChevronRightCircleOutline" 
+                    Kind="Send" 
                     Foreground="{DynamicResource MaterialDesignBody}"
                     Height="30" 
                     Width="30" 

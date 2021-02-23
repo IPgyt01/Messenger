@@ -12,7 +12,7 @@ namespace Messenger.Database.Models
         public string Login { get; set; }
         public string Password { get; set; }
         // список чатов
-        public List<Chat> Chats { get; set; }
+        public List<string> ChatIds { get; set; }
         
         // пусть пока будет стринг
         public string ProfileImage { get; set; }

@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 using Messenger.Database;
+using Messenger.Database.Models;
 using Messenger.WebApi;
+using Messenger.WebApi.Controllers;
 
 namespace Messenger.Desktop
 {
@@ -11,6 +14,8 @@ namespace Messenger.Desktop
     /// </summary>
     public partial class MainWindow
     {
+        private User _user;
+        
         public MainWindow()
         {
             InitializeComponent();

@@ -1,5 +1,10 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using Messenger.Database.Models;
 
 namespace Messenger.Desktop
 {

@@ -11,7 +11,7 @@ namespace Messenger.Database.Models
         public int ChatId {get;set;}
         public int UsersCount {get;set;}
         public IEnumerable<int> UserIds {get;set;}
-        public IEnumerable<Message> History { get; set; }
+        public List<Message> History { get; set; }
         // роли добавим позже, пока только мешаться будут
         //public IEnumerable<string> UserRoles { get; set; }
     }

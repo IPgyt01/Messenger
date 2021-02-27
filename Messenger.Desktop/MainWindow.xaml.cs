@@ -27,7 +27,7 @@ namespace Messenger.Desktop
             frame.NavigationService.Navigate(new Uri("Pages/PageNoDialog.xaml", UriKind.Relative));
             _listBox = new ObservableCollection<Chat>
             {
-                new Chat{Id = "2"},
+                new Chat{Id = "2", History = new List<Message>{new Message{Content = "Дратути))0)"}}},
                 new Chat{Id = "1"},
                 new Chat{Id = "3"},
             };

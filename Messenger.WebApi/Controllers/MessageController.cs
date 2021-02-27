@@ -7,7 +7,5 @@ namespace Messenger.WebApi.Controllers
     public class MessageController
     {
         private MessageContext _db = new MessageContext();
-
-        
     }
 }

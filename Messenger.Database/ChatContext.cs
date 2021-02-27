@@ -7,6 +7,6 @@ namespace Messenger.Database
     {
         public ChatContext() : base() { }
         
-        public IMongoCollection<Chat> Users => Database.GetCollection<Chat>(Collections.Chats);
+        public IMongoCollection<Chat> Chats => Database.GetCollection<Chat>(Collections.Chats);
     }
 }

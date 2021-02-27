@@ -3,9 +3,11 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:Messenger.Desktop"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d">
+    <!-- <Page.DataContext> -->
+    <!--     <desktop:класс из ViewModel></desktop:MainWindow> -->
+    <!-- </Page.DataContext> -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
@@ -16,15 +18,14 @@
         <Border Grid.Row="0" Background="Indigo" Height="50"></Border>
         <!-- Body Диалог -->
         <Border Grid.Row="1" BorderBrush="Bisque" BorderThickness="1px 0 0 1">
-            <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
+            <ListBox ItemsSource="{Binding }" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
                      Focusable="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <ListBoxItem>
                             <Border>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock />
-                                    <TextBlock />
+                                    <TextBlock Text="{Binding }"/>
                                 </StackPanel>
                             </Border>
                         </ListBoxItem>

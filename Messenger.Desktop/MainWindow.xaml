@@ -4,14 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Messenger.Desktop"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        xmlns:desktop="clr-namespace:Messenger.Desktop"
         mc:Ignorable="d"
         Title="MainWindow" Height="560" Width="820" MinWidth="500px" MinHeight="280">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
     <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="270px"/>
@@ -22,13 +25,13 @@
             <!-- Шапка -->
             <Menu DockPanel.Dock="Top" Height="50px"></Menu>
             <!-- Body Список диалогов -->
-            <ListBox ItemsSource="{Binding Path=_listBox,RelativeSource={RelativeSource FindAncestor,AncestorType=Window}}">
-                <!-- Как я понял, Card - чето типа области или элемента materialDesign -->
+            <!-- ItemsSource="{Binding Path=_listBox,RelativeSource={RelativeSource FindAncestor,AncestorType=Window}}" -->
+            <ListBox ItemsSource="{Binding Path=Chats}">
                 <ListBox.ItemContainerStyle>
                      <Style BasedOn="{StaticResource MaterialDesignListBoxItem}" TargetType="{x:Type ListBoxItem}">
                           <Setter Property="Padding" Value="5px"/>
                           <Setter Property="Height" Value="50px"/>
-                          <Setter Property="Content" Value="{Binding Id}"></Setter>
+                          <Setter Property="Content" Value="{Binding History }"></Setter>
                           <EventSetter Event="MouseUp" Handler="ButtonBase_OnClick"></EventSetter>
                      </Style> 
                 </ListBox.ItemContainerStyle>

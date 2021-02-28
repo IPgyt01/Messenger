@@ -10,7 +10,7 @@ namespace Messenger.WebApi.Test
         [Test]
         public void ConnectionTest()
         {
-            var controller = new ChatController();
+            var controller = new ChatHelper();
 
             var a = 0;
         }

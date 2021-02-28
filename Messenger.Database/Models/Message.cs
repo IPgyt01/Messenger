@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Messenger.Database.Models
 {
-    public class Message
+    public sealed class Message
     {
         // содержимое сообщения
         public string Content { get; set; }

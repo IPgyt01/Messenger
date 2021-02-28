@@ -1,24 +1,25 @@
-﻿using Messenger.Database.Models;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 
 namespace Messenger.Database
 {
     public class DatabaseContext
     {
-        /*временная переменная, которая подключает вас к локальному хосту mongo
-         когда сервер будет в инете, значение поменяется*/ 
-        private readonly string _host = "mongodb+srv://alexzonic:Flatronw22@cluster0.vvwvz.mongodb.net/MessengerDB?retryWrites=true&w=majority";
+        /*переменная, которая подключает вас к хосту mongo*/
+        private const string Host = "mongodb+srv://alexzonic:Flatronw22@cluster0.vvwvz.mongodb.net/MessengerDB?retryWrites=true&w=majority";
 
         // это будет именем базы данных, в которой хранятся коллекции
-        private readonly string _dbName = "MessengerDB";
-        
-        private IMongoClient _client;
+        private const string DbName = "MessengerDB";
+
+        private readonly IMongoClient _client;
         protected IMongoDatabase Database { get; }
-            
-        public DatabaseContext()
+
+        protected DatabaseContext()
         {
-            _client = new MongoClient(_host);
-            Database = _client.GetDatabase(_dbName);
+            if (_client is null) // так client будет всего 1
+            {
+                _client = new MongoClient(Host);
+                Database = _client.GetDatabase(DbName);
+            }
         }
     }
 }

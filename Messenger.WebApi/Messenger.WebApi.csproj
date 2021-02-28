@@ -37,6 +37,10 @@
           <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
           <Private>True</Private>
         </Reference>
+        <Reference Include="JetBrains.Annotations, Version=2020.3.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325">
+          <HintPath>..\packages\JetBrains.Annotations.2020.3.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
           <Private>True</Private>
@@ -74,10 +78,8 @@
     <ItemGroup>
         <Compile Include="Api.cs" />
         <Compile Include="Test\ChatsVMTest.cs" />
-        <Compile Include="UserAuthorize.cs" />
-        <Compile Include="Controllers\ChatController.cs" />
-        <Compile Include="Controllers\MessageController.cs" />
-        <Compile Include="Controllers\UserController.cs" />
+        <Compile Include="Controllers\ChatHelper.cs" />
+        <Compile Include="Controllers\UserHelper.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

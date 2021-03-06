@@ -17,7 +17,7 @@ namespace Messenger.Desktop
             // эти две строчки просто для теста, что все будет работать без ошибок, удалите, когда будете делать
             //var db = new DatabaseContext();
             var api = new Api();
-            frame.NavigationService.Navigate(new Uri("Pages/PageNoDialog.xaml", UriKind.Relative));
+            //frame.NavigationService.Navigate(new Uri("Pages/PageNoDialog.xaml", UriKind.Relative));
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

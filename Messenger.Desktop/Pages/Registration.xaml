@@ -5,11 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Messenger.Desktop.Pages"
       mc:Ignorable="d"
-      Title="Registration" Height="380" Width="330" >
-    <Grid>
+      Title="Registration" Height="300" Width="350" >
+    <Grid Background="DodgerBlue">
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
@@ -18,19 +19,20 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="65"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition Width="60"></ColumnDefinition>
-            <ColumnDefinition Width="140"></ColumnDefinition>
-            <ColumnDefinition Width="65"></ColumnDefinition>
+            <ColumnDefinition Width="190"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
-        <Label Grid.Row="1" Grid.Column="1" Content="Никнейм" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="60" />
-        <Label Grid.Row="2" Grid.Column="1" Content="Логин" HorizontalAlignment="Right" VerticalAlignment="Center" Height="24" Width="48" />
-        <Label Grid.Row="3" Grid.Column="1" Content="Пароль" HorizontalAlignment="Right" VerticalAlignment="Center" Height="24" Width="54" />
-        <TextBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="135" Height="22"/>
-        <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="135" Height="22"/>
-        <PasswordBox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="135" Height="22" />
-        <Button Grid.Row="4" Grid.Column="1" Content="Зарегистрироваться" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Height="28" Grid.ColumnSpan="2"/>
+        
+        <Label Grid.Row="1" Grid.Column="1" Content="Регистрация" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="140" Grid.ColumnSpan="2" FontFamily="Calibri" FontSize="24" />
+        <Label Grid.Row="2" Grid.Column="1" Content="Никнейм" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" Width="60"  Foreground="White" />
+        <Label Grid.Row="3" Grid.Column="1" Content="Логин" HorizontalAlignment="Right" VerticalAlignment="Center" Height="26" Width="48"  Foreground="White" />
+        <Label Grid.Row="4" Grid.Column="1" Content="Пароль" HorizontalAlignment="Right" VerticalAlignment="Center" Height="26" Width="54"  Foreground="White" />
+        <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="185" Height="22"/>
+        <TextBox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="185" Height="22"/>
+        <PasswordBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="185" Height="22" />
+        <Button Grid.Row="5" Grid.Column="1" Content="Зарегистрироваться" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Height="28" Grid.ColumnSpan="2" Background ="Gray"/>
 
     </Grid>
 </Page>

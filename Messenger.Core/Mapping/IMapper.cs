@@ -1,4 +1,4 @@
-﻿namespace Messenger.Database.Mapper
+﻿namespace Messenger.Core.Mapping
 {
     public interface IMapper<in TSource, out TResult>
     {

@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace Messenger.Database
+namespace Messenger.Database.Context
 {
     public class DatabaseContext
     {

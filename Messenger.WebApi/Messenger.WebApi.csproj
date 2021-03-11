@@ -41,6 +41,7 @@
           <HintPath>..\packages\JetBrains.Annotations.2020.3.0\lib\net20\JetBrains.Annotations.dll</HintPath>
           <Private>True</Private>
         </Reference>
+        <Reference Include="Microsoft.CSharp" />
         <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
           <Private>True</Private>
@@ -62,6 +63,10 @@
           <HintPath>..\packages\NUnit.3.13.1\lib\net45\nunit.framework.dll</HintPath>
           <Private>True</Private>
         </Reference>
+        <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
           <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
@@ -77,15 +82,22 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Api.cs" />
+        <Compile Include="ApiRegistry.cs" />
+        <Compile Include="Helpers\IChatHelper.cs" />
+        <Compile Include="Helpers\IUserHelper.cs" />
         <Compile Include="Test\ChatsVMTest.cs" />
-        <Compile Include="Controllers\ChatHelper.cs" />
-        <Compile Include="Controllers\UserHelper.cs" />
+        <Compile Include="Helpers\ChatHelper.cs" />
+        <Compile Include="Helpers\UserHelper.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\Messenger.Core\Messenger.Core.csproj">
+        <Project>{035a69bc-7ea4-4ce0-baf9-9ab81b5652c9}</Project>
+        <Name>Messenger.Core</Name>
+      </ProjectReference>
       <ProjectReference Include="..\Messenger.Database\Messenger.Database.csproj">
         <Project>{59b28217-22fa-485a-b024-fc136eadb1f1}</Project>
         <Name>Messenger.Database</Name>

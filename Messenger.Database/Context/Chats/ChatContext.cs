@@ -1,33 +1,34 @@
 ﻿using System.Threading.Tasks;
 using JetBrains.Annotations;
+using Messenger.Core;
 using Messenger.Database.Constants;
 using Messenger.Database.Documents;
 using Messenger.Database.Mapper;
 using Messenger.Database.Models;
 using MongoDB.Driver;
 
-namespace Messenger.Database
+namespace Messenger.Database.Context.Chats
 {
-    public sealed class ChatContext : DatabaseContext
+    [IoC]
+    public sealed class ChatContext : DatabaseContext, IChatContext
     {
         public ChatContext() : base() { }
         private readonly ChatDocumentMapper _chatDocumentMapper = new ChatDocumentMapper();
         private IMongoCollection<ChatDocument> Chats => Database.GetCollection<ChatDocument>(CollectionsNames.Chats);
-
-        [CanBeNull]
-        public async Task<Chat> Get([NotNull] string id)
+        
+        public async Task<Chat> Get(string id)
         {
             var chat = await Chats.Find(Builders<ChatDocument>.Filter.Eq(c => c.Id, id)).FirstOrDefaultAsync();
             return _chatDocumentMapper.Map(chat);
         }
 
-        public async Task AddMessage([NotNull] string chatId, [NotNull] Message message)
+        public async Task AddMessage(string chatId, Message message)
         {
             var chat = await Get(chatId);
             chat?.History.Add(message);
         }
         
-        public async Task Create([NotNull] Chat chat)
+        public async Task Create(Chat chat)
         {
             await Chats.InsertOneAsync(_chatDocumentMapper.Map(chat));
         }

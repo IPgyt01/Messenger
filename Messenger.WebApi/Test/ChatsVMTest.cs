@@ -1,4 +1,4 @@
-﻿using Messenger.WebApi.Controllers;
+﻿using Messenger.WebApi.Helpers;
 using MongoDB.Driver;
 using NUnit.Framework;
 
@@ -10,9 +10,7 @@ namespace Messenger.WebApi.Test
         [Test]
         public void ConnectionTest()
         {
-            var controller = new ChatHelper();
-
-            var a = 0;
+            
         }
     }
 }

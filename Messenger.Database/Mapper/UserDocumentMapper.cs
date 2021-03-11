@@ -1,9 +1,12 @@
 ﻿using JetBrains.Annotations;
+using Messenger.Core;
+using Messenger.Core.Mapping;
 using Messenger.Database.Documents;
 using Messenger.Database.Models;
 
 namespace Messenger.Database.Mapper
 {
+    [IoC]
     public sealed class UserDocumentMapper : IMapper<User, UserDocument>, IMapper<UserDocument, User>
     {
         [CanBeNull]
